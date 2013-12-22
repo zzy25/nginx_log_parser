@@ -18,7 +18,7 @@ parser = NginxLogParser('$remote_addr - $remote_user [$time_local] "$request" ' 
                         '$server_name "$http_user_agent" "$request_time" "-X-" "$upstream_addr" "$upstream_response_time" "$bytes_sent" "$request_length" ') #feed a nginx log config 
 with open('path/to/nginx/log','w') as fp:
     for f in fp:
-        parser.parse_line(f)#will return a dict.keys in the dict is the variablename in the nginx config, values is the real result in the log file
+        parser.parse_line(f)#will return a dict. Keys in the dict are the variable name in the nginx config, values are the real result in the log file
         #do things
 ```
 
